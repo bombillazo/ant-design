@@ -321,7 +321,7 @@ function generateCalendar<DateType>(generateConfig: GenerateConfig<DateType>) {
           headerRender({
             value: mergedValue,
             type: mergedMode,
-            onChange: triggerChange,
+            onChange: onInternalSelect,
             onTypeChange: triggerModeChange,
           })
         ) : (
@@ -333,7 +333,7 @@ function generateCalendar<DateType>(generateConfig: GenerateConfig<DateType>) {
             fullscreen={fullscreen}
             locale={contextLocale?.lang}
             validRange={validRange}
-            onChange={triggerChange}
+            onChange={onInternalSelect}
             onModeChange={triggerModeChange}
             hideModeSwitch={hideModeSwitch}
           />
